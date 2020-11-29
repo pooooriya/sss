@@ -1,38 +1,36 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Vazir.eot');
+  src: url('./fonts/Vazir.eot?#iefix') format('embedded-opentype'), 
+  url('./fonts/Vazir.woff2') format('woff2'), 
+  url('./fonts/Vazir.woff') format('woff'), 
+  url('./fonts/Vazir.ttf') format('truetype');
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vazir', Arial, sans-serif;
+    font-weight:normal;
+   }
+ @font-face {
+  font-family: Vazir;
+  font-style: normal;
+  font-weight: bold;
+  src: url('./fonts/Vazir-Bold.eot');
+  src: url('./fonts/Vazir-Bold.eot?#iefix') format('embedded-opentype'), 
+  url('./fonts/Vazir-Bold.woff2') format('woff2'), 
+  url('./fonts/Vazir-Bold.woff') format('woff'), 
+  url('./fonts/Vazir-Bold.ttf') format('truetype');
+ }
+  
+body {
+  font-family: 'Vazir', Arial, sans-serif;
+  font-weight:normal;
+  
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main{
+  height: 100vh;
 }

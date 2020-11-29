@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { Route, Redirect, Switch } from 'react-router-dom';
+import NavBar from './components/navbar'
+import Home from './components/home'
+import ShopingBasket from './components/shopingbasket'
+import Favorites from './components/favorites'
 import './App.css';
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <div className="main">
+        <Switch>
+          <Route path={`/home`} component={Home}></Route>
+          <Route path={`/favorites`} component={Favorites}></Route>
+          <Route path={`/shopingbasket`} component={ShopingBasket}></Route>
+          <Redirect from={`/`} exact to={`/home`} />
+        </Switch>
+      </div>
+    </>
   );
 }
 
 export default App;
+
